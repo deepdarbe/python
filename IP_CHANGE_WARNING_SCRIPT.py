@@ -11,8 +11,7 @@ def get_external_ip():
     try:
         response = requests.get('https://api.ipify.org?format=json', timeout=10)
         data = response.json()
-        
-        return data['ip']
+                return data['ip']
     except Exception as e:
         print("IP adresi alınırken bir hata oluştu:", e)
         return None
